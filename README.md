@@ -7,9 +7,9 @@ Implement a naive algorithm for generating all possible cards in a Spot it deck
 given the number of pictures in the lexicon and number of pictures per card.
 
 ## Dependencies
-python3 
-pip3
-
+- python3 
+- pip3
+- source (bash only)
 ## Usage
 Execute the shell script in the root repository by typing ./start.sh into a bash terminal.
 The webpage is available on http://127.0.0.1/5000
