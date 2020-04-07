@@ -11,8 +11,8 @@ given the number of pictures in the lexicon and number of pictures per card.
 - pip3
 - source (bash only)
 ## Usage
-Execute the shell script in the root repository by typing ./start.sh into a bash terminal.
-The webpage is available on http://127.0.0.1/5000
+Execute the shell script in the root repository by typing ./start into a bash terminal.
+The flask application is served on http://127.0.0.1/5000
 
 ## Technology
 This app uses a Flask backend to serve static webpages along with bootstrap and wtForms for styling
