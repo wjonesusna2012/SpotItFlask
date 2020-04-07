@@ -5,7 +5,27 @@
 
 {% block content %}
     <div class="container">
-        <div class="page-header"><h1>Spot It Generator {{ name }}</h1></div>
+        <div class="page-header"><h1>Spot It Generator, Welcome {{ name }}!</h1></div>
         {{ wtf.quick_form(form) }}
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Card #</th>
+                    {% for i in range(1, symbolData[0]|length + 1) %}
+                        <th><img src="{{url_for('static', filename='')}}{{i}}.png" /></th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(1, symbolData|length + 1) %}
+                    <tr>
+                        <th scope="row">{{i}}</th>
+                        {%for j in range(0, symbolData[i-1]|length) %}
+                            <td><img src="{{url_for('static', filename='')}}{{ 'c' if symbolData[i-1][j] == 1 else 'x'}}.png"/></td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}                
+            </tbody>
+        </table>
     </div>
 {% endblock %}
